@@ -1,1 +1,1 @@
-C++ Qt Desktop AAplication using Postgres SQL database.
+C++ Qt Desktop Application using Postgres SQL database.
