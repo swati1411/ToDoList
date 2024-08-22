@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QStandardPaths>
+#include <pqxx/pqxx>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -27,7 +28,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-
-    QString cachePath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + "\\todo.txt";
+    pqxx::connection *conn;  // Declare conn as a member variable
+    void loadTasks();        // Method to load tasks from the database
 };
 #endif // MAINWINDOW_H

@@ -2,11 +2,15 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++17
+CONFIG += c++11
 
-# You can make your code fail to compile if it uses deprecated APIs.
-# In order to do so, uncomment the following line.
-#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+QMAKE_CXXFLAGS += -D_GLIBCXX_USE_CXX11_ABI=1
+
+# Include paths for libpqxx and libpq
+INCLUDEPATH += C:\Users\swati\vcpkg\installed\x64-mingw-dynamic\include
+
+# Library paths for libpqxx and libpq
+LIBS += -LC:\Users\swati\vcpkg\installed\x64-mingw-dynamic\lib -llibpqxx -llibpq
 
 SOURCES += \
     main.cpp \

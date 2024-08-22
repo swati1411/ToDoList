@@ -1,5 +1,6 @@
 #include "mainwindow.h"
-
+#include <pqxx/pqxx>
+#include <iostream>
 #include <QApplication>
 
 int main(int argc, char *argv[])
